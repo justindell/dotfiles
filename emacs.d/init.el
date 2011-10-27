@@ -9,9 +9,7 @@
 (when (not package-archive-contents)
   (package-refresh-contents))
 
-(defvar my-packages '(color-theme
-                      color-theme-solarized
-                      starter-kit
+(defvar my-packages '(starter-kit
                       starter-kit-lisp
                       starter-kit-bindings
                       starter-kit-ruby
@@ -19,7 +17,10 @@
                       go-mode
                       clojure-mode
                       clojure-test-mode
-                      clojurescript-mode)
+                      clojurescript-mode
+                      color-theme
+                      color-theme-solarized)
+                      
   "A list of packages to ensure are installed at launch.")
 
 (dolist (p my-packages)
@@ -69,6 +70,7 @@
 (setq-default indent-tabs-mode nil)
 
 ;; solarized
+(require 'color-theme)
 (eval-after-load 'color-theme
   (progn
     (require 'color-theme-solarized)
@@ -85,7 +87,6 @@
 
 (global-set-key [f7] 'ns-toggle-fullscreen)
 
-=======
 ;; steve yegges's suggested keybindings
 (global-set-key "\C-x\C-m" 'execute-extended-command)
 (global-set-key "\C-c\C-m" 'execute-extended-command)
