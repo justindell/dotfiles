@@ -63,18 +63,19 @@
                     :height 160)
 
 ;; show line numbers
-(global-linum-mode t)
+(when window-system (global-linum-mode t))
 
 ;; tabs are 2 spaces
 (setq-default tab-width 2)
 (setq-default indent-tabs-mode nil)
 
 ;; solarized
-(require 'color-theme)
-(eval-after-load 'color-theme
-  (progn
-    (require 'color-theme-solarized)
-    (color-theme-solarized-light)))
+(when window-system
+  (require 'color-theme)
+  (eval-after-load 'color-theme
+    (progn
+      (require 'color-theme-solarized)
+      (color-theme-solarized-light))) )
 
 ;; KEYBINDINGS
 ;;--------------------------------------------------
