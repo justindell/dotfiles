@@ -1,16 +1,18 @@
+;; PACKAGES
+;;--------------------------------------------------
+
 (require 'package)
 (add-to-list 'package-archives
-              '("marmalade" . "http://marmalade-repo.org/packages/") t)
+             '("marmalade" . "http://marmalade-repo.org/packages/") t)
 (package-initialize)
 
 (when (not package-archive-contents)
-   (package-refresh-contents))
+  (package-refresh-contents))
 
-;; Add in your own as you wish:
 (defvar my-packages '(color-theme
                       color-theme-solarized
-                      starter-kit 
-                      starter-kit-lisp 
+                      starter-kit
+                      starter-kit-lisp
                       starter-kit-bindings
                       starter-kit-ruby
                       starter-kit-eshell
@@ -72,7 +74,7 @@
   (eval-after-load 'color-theme
     (progn
       (require 'color-theme-solarized)
-      (color-theme-solarized-light))) )
+      (color-theme-solarized-light))))
 
 ;; KEYBINDINGS
 ;;--------------------------------------------------
@@ -89,5 +91,8 @@
 (global-set-key "\C-x\C-m" 'execute-extended-command)
 (global-set-key "\C-c\C-m" 'execute-extended-command)
 
+(global-set-key "\C-w" 'backward-kill-word)
+(global-set-key "\C-x\C-k" 'kill-region)
+;;(global-set-key "\C-c\C-k" 'kill-region)
 
-
+(global-set-key [f5] 'call-last-kbd-macro)
