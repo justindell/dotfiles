@@ -79,11 +79,14 @@
 ;; KEYBINDINGS
 ;;--------------------------------------------------
 
-;; make option the super key on mac
-(setq mac-option-modifier 'super)
+(defun osxp ()
+  (string= "darwin" system-type))
 
-;; map meta to command key for mac
-(setq ns-command-modifier 'meta)
+(when (and (osxp) window-system)
+  ;; make option the super key on mac
+  (setq mac-option-modifier 'super)
+  ;; map meta to command key for mac
+  (setq ns-command-modifier 'meta))
 
 (global-set-key [f7] 'ns-toggle-fullscreen)
 
