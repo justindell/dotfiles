@@ -50,6 +50,8 @@
 ;; CODING STYLES
 ;;--------------------------------------------------
 
+(remove-hook 'prog-mode-hook 'esk-turn-on-hl-line-mode)
+
 ;; smooth-scrolling stops that annoying jump when moving around
 (require 'smooth-scrolling)
 
@@ -94,7 +96,6 @@
 
 (global-set-key "\C-w" 'backward-kill-word)
 (global-set-key "\C-x\C-k" 'kill-region)
-;;(global-set-key "\C-c\C-k" 'kill-region)
 
 (global-set-key [f5] 'call-last-kbd-macro)
 
