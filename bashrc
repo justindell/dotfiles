@@ -51,7 +51,7 @@ export PATH="$HOME/.bin:/usr/local/bin:/usr/local/sbin:/usr/local/share/python:$
 export PATH="$CLOJURESCRIPT_HOME/bin:$PATH"
 export PATH="$CLOJURESCRIPT_WATCH_HOME:$PATH"
 export PATH="$HOME/.rbenv/bin:$PATH"
-export GOROOT="$HOME/sandbox/src/go"
+#export GOROOT="$HOME/sandbox/src/go"
 export PATH="$GOROOT/bin:$PATH"
 
 # functions ---------------------------------------------------

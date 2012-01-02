@@ -86,24 +86,6 @@ nmap <D-[> <<
 vmap <D-[> <<
 imap <D-[> <C-O><<
 
-" NERDTree 
- 
-" Enable nice colors
-let NERDChristmasTree = 1
- 
-" Make it easy to see where we are
-let NERDTreeHighlightCursorline = 1
- 
-" Make bookmarks visible
-let NERDTreeShowBookmarks = 1
- 
-" Show hidden files
-let NERDTreeShowHidden = 1
-let NERDTreeIgnore=['\.$', '\~$']
- 
-" Make F2 open NERDTree
-nmap <F2> :NERDTreeToggle<CR>
-
 "au BufRead *.rb :emenu Snippets.ruby
 "au BufRead *.rake :emenu Snippets.ruby
 au BufNewFile,BufRead *.nant set filetype=xml
@@ -130,21 +112,9 @@ nnoremap <silent><D-k> :set paste<CR>m`O<Esc>``:set nopaste<CR>
 set showmatch
 set matchtime=1
 
-" ruby tests from drew pope
-
-map <silent> <LocalLeader>rb :RunAllRubyTests<CR>
-map <silent> <LocalLeader>rc :RunRubyFocusedContext<CR>
-map <silent> <LocalLeader>rf :RunRubyFocusedUnitTest<CR>
-
 " rebuild ctags
 map <silent> <LocalLeader>rt :!ctags -R --exclude=".git\|.svn\|log\|tmp\|db\|pkg" --extra=+f<CR> 
-
-" show trailing whitespace
-set listchars=tab:>-,trail:·,eol:$
-nmap <silent> <leader>s :set nolist!<CR>
 
 " turn off annoying messages
 set shortmess=atI
 
-" gundo
-nnoremap <F5> :GundoToggle<CR>
