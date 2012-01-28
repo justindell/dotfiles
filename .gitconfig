@@ -1,0 +1,15 @@
+[user]
+	name = Gareth Jones
+  email = gjones@drwholdings.com
+[alias]
+  co = checkout
+  ci = commit
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+[core]
+  excludesfile = /Users/gjones/.gitignore
+  editor = /usr/bin/vim 
+[apply]
+  whitespace = nowarn

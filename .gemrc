@@ -1,0 +1,11 @@
+--- 
+update: --env-shebang
+rdoc: --inline-source --line-numbers 
+:sources: 
+  - http://rubygems.org
+  - http://gems.github.com
+  - http://gems.us.drwholdings.com:8808
+:update_sources: true
+:verbose: true
+install: --env-shebang
+gem: --no-ri --no-rdoc
