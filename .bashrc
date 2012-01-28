@@ -27,11 +27,6 @@ if [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
   export PS1='\[\033[01;34m\]\w\[\033[00m\]\[\033[01;32m\]$(__git_ps1 " (%s)")\[\033[00m\] \n$ '
 fi
 
-# red prompt when on prod servers
-if [ $(expr "$(hostname)" : "sup-.*") -gt 0 ]; then
-  PS1='\[\e[1;31m\][\u@\h \W]\$\[\e[0m\] '
-fi
-
 # basic path
 export PATH="$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/local/share/python:$PATH"
 
