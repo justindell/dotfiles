@@ -6,7 +6,7 @@ function clean_path {
   echo "$(echo $1 | sed 's|\./||')"
 }
 
-for f in $(ls -a $dotfilesdir | egrep -v 'DS_Store|\.git|^\.\.$|^\.$')
+for f in $(ls -a $dotfilesdir | egrep -v 'DS_Store|\.git$|^\.\.$|^\.$|\.gitmodules')
 do
   file="$dotfilesdir/$f"
   dest="$HOME/$f"
