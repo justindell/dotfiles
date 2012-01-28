@@ -14,6 +14,7 @@
                       starter-kit-bindings
                       starter-kit-ruby
                       starter-kit-eshell
+                      haskell-mode
                       go-mode
                       clojure-mode
                       clojure-test-mode

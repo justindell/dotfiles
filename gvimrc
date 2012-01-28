@@ -21,7 +21,7 @@ set directory=/tmp
 
 if has('gui_running')
   " set default color scheme
-  set background=light
+  set background=dark
   colorscheme solarized
 
   " default screen size
@@ -118,3 +118,9 @@ map <silent> <LocalLeader>rt :!ctags -R --exclude=".git\|.svn\|log\|tmp\|db\|pkg
 " turn off annoying messages
 set shortmess=atI
 
+" double percentage sign in command mode is expanded
+" to directory of current file - http://vimcasts.org/e/14
+cnoremap %% <C-R>=expand('%:h').'/'<cr>
+
+map <leader>f :CommandTFlush<cr>\|:CommandT<cr>
+map <leader>F :CommandTFlush<cr>\|:CommandT %%<cr>
