@@ -1,29 +1,17 @@
 #!/usr/bin/env bash
 
-dotfilesdir=$HOME/sandbox/dotfiles
+[ -n "$DBG_INSTALL" ] && set -x
 
-function clean_path {
-  echo "$(echo $1 | sed 's|\./||')"
-}
+dotfilesdir=$HOME/sandbox/dotfiles
 
 for f in $(ls -a $dotfilesdir | egrep -v 'DS_Store|\.git$|^\.\.$|^\.$|\.gitmodules')
 do
-  file="$dotfilesdir/$f"
   dest="$HOME/$f"
-  if [ -e $dest ] || [ -h $dest ]; then
-    if [ -d $dest ]; then
-      rm -rf $dest
-    else
-      rm $dest
-    fi
-  fi
-  ln -s $file $dest
+  test -e $dest && rm -rf $dest
+  ln -s "$dotfilesdir/$f" $dest
 done
 
 ssh_config="$HOME/.ssh/config" 
-if [ -e $ssh_config ] || [ -h $ssh_config ]; then
-  rm -f $ssh_config
-fi
-echo "ln -s $dotfilesdir/ssh/config $ssh_config"
+test -e $ssh_config && rm $ssh_config
 ln -s $dotfilesdir/ssh/config $ssh_config
 
