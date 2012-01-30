@@ -16,19 +16,6 @@ Host prod-ps
 User prodappadmin
 HostName sup-chiti08
 
-# side-by-side stack
-Host sbs-is 
-User prodappadmin
-HostName sup-chipos04
-
-Host sbs-ts 
-User prodappadmin
-HostName sup-chipos06
-
-Host sbs-ps 
-User prodappadmin
-HostName sup-chipos05
-
 # mirror stack
 Host mirror-is mirror-ps
 User prodappadmin
