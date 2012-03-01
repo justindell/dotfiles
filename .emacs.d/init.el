@@ -63,7 +63,7 @@
 ;; use inconsolata
 (set-face-attribute 'default nil
                     :family "Inconsolata"
-                    :height 160)
+                    :height 140)
 
 ;; show line numbers
 (when window-system (global-linum-mode t))

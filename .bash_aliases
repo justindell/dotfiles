@@ -1,5 +1,5 @@
 # general
-alias la="ls -lach"
+alias la="ls -lah --color"
 alias lsd="ls | grep ^d"
 
 # git aliases

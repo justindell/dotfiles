@@ -17,3 +17,8 @@ doc/tags
 .emacs.d/places
 .emacs.d/eshell
 .emacs.d/url
+.xmonad/xmonad.hi
+.xmonad/xmonad.o
+.xmonad/xmonad.errors
+.xmonad/xmonad-*
+vim/
