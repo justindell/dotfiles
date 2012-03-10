@@ -46,3 +46,6 @@ export DYLD_LIBRARY_PATH="/usr/local/29west/LBM_3.6/Darwin-9.8.0-x86_64/lib/"
 export GOROOT="/usr/local/Cellar/go/r60.1"
 export PATH="$GOROOT/bin:$PATH"
 
+# rubygems
+export PATH="/usr/local/Cellar/ruby/1.9.3-p0/bin:$PATH"
+
