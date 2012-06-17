@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-
-echo 'Backing up music...'
-rsync -avu --exclude='DS_Store' /Users/gjones/Music/mp3/ root@10.0.1.4:/volume1/music/gaz/
